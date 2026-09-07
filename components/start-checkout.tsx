@@ -181,23 +181,14 @@ export function StartCheckout() {
                 {/* Header */}
                 <header className="flex items-start justify-between gap-6 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-3">
-                    <svg
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      className="h-9 w-9 shrink-0 text-neutral-900"
+                    <span
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-neutral-900"
                       aria-hidden
                     >
-                      <circle
-                        cx="16"
-                        cy="16"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeDasharray="52 10"
-                        strokeLinecap="round"
-                        transform="rotate(-40 16 16)"
-                      />
-                    </svg>
+                      <span className="font-serif text-lg font-bold italic leading-none tracking-tight text-neutral-900">
+                        LM
+                      </span>
+                    </span>
                     <div>
                       <p className="text-xl font-bold leading-none tracking-tight">
                         {SITE_NAME}
