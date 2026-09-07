@@ -3,12 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { useSearchParams } from "next/navigation";
-import { Caveat } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
 import { getOffer, SITE_NAME } from "@/lib/config";
 import { formatBRL, whatsappHref } from "@/lib/whatsapp";
 import { Container } from "./container";
 
-const signature = Caveat({
+const signature = Dancing_Script({
   subsets: ["latin"],
   weight: ["700"],
 });
