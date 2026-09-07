@@ -3,15 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { useSearchParams } from "next/navigation";
-import { Dancing_Script } from "next/font/google";
-import { getOffer, SITE_NAME } from "@/lib/config";
+import { getOffer, PHOTO_PROFILE, SITE_NAME } from "@/lib/config";
 import { formatBRL, whatsappHref } from "@/lib/whatsapp";
 import { Container } from "./container";
-
-const signature = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 export function StartCheckout() {
   const search = useSearchParams();
@@ -187,14 +181,13 @@ export function StartCheckout() {
                 {/* Header */}
                 <header className="flex items-start justify-between gap-6 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-3">
-                    <span
-                      className={`${signature.className} inline-flex items-baseline leading-none text-neutral-900`}
-                      aria-hidden
-                    >
-                      <span className="text-4xl">L</span>
-                      <span className="text-2xl">M</span>
-                      <span className="text-2xl">.</span>
-                    </span>
+                    <img
+                      src={PHOTO_PROFILE}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
                     <div>
                       <p className="text-xl font-bold leading-none tracking-tight">
                         {SITE_NAME}
