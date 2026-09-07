@@ -1,4 +1,5 @@
 import { Container } from "./container";
+import { Typewriter } from "./typewriter";
 import { INSTAGRAM_POST, PHOTO_PORTRAIT } from "@/lib/config";
 
 const CLIENTS = ["iFood", "Bradesco", "Itaú", "Samba Mobile", "CCEE", "ZUP"];
@@ -21,8 +22,9 @@ export function Hero() {
               Conselheiro de IA.
               <br />
               <span className="text-subtle">
-                IA em produção,
-                <br className="hidden sm:block" /> não em piloto.
+                <Typewriter
+                  phrases={["CTO as a Service", "CEO as a Service"]}
+                />
               </span>
             </h1>
 
@@ -43,7 +45,7 @@ export function Hero() {
                 Ver cardápio
               </a>
               <a
-                href="/checkout/?offer=conselheiro"
+                href="/start-checkout/?offer=conselheiro"
                 className="rounded-md border border-border-strong px-5 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
               >
                 Assento de conselho
