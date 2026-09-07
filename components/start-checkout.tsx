@@ -3,9 +3,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { useSearchParams } from "next/navigation";
+import { Great_Vibes } from "next/font/google";
 import { getOffer, SITE_NAME } from "@/lib/config";
 import { formatBRL, whatsappHref } from "@/lib/whatsapp";
 import { Container } from "./container";
+
+const signature = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export function StartCheckout() {
   const search = useSearchParams();
@@ -182,12 +188,10 @@ export function StartCheckout() {
                 <header className="flex items-start justify-between gap-6 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-3">
                     <span
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-neutral-900"
+                      className={`${signature.className} text-3xl leading-none text-neutral-900`}
                       aria-hidden
                     >
-                      <span className="font-serif text-lg font-bold italic leading-none tracking-tight text-neutral-900">
-                        LM
-                      </span>
+                      LM
                     </span>
                     <div>
                       <p className="text-xl font-bold leading-none tracking-tight">
