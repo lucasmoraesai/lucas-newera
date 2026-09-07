@@ -10,7 +10,7 @@ import { Container } from "./container";
 
 const signature = Dancing_Script({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400"],
 });
 
 export function StartCheckout() {
@@ -188,10 +188,12 @@ export function StartCheckout() {
                 <header className="flex items-start justify-between gap-6 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-3">
                     <span
-                      className={`${signature.className} text-4xl leading-none text-neutral-900`}
+                      className={`${signature.className} inline-flex items-baseline leading-none text-neutral-900`}
                       aria-hidden
                     >
-                      LM
+                      <span className="text-4xl">L</span>
+                      <span className="text-2xl">M</span>
+                      <span className="text-2xl">.</span>
                     </span>
                     <div>
                       <p className="text-xl font-bold leading-none tracking-tight">
