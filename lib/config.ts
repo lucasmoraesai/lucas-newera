@@ -159,7 +159,7 @@ export function getOffer(id: string | null | undefined) {
 export function offerCheckoutHref(id: string, fullDay = false) {
   const params = new URLSearchParams({ offer: id });
   if (id === "workshop" && fullDay) params.set("variant", "full");
-  return `/checkout/?${params.toString()}`;
+  return `/start-checkout/?${params.toString()}`;
 }
 
 export const TALK_THEMES = [
@@ -170,6 +170,55 @@ export const TALK_THEMES = [
   "IA dentro de produto SaaS: onde vira receita e onde vira custo",
   "Do slide ao contrato: o que empresa grande exige para colocar IA no ar",
 ] as const;
+
+export type Milestone = {
+  period: string;
+  title: string;
+  body: string;
+};
+
+export const MILESTONES: Milestone[] = [
+  {
+    period: "2014",
+    title: "Nasce a Edulabzz",
+    body: "Um jogo de educação financeira desenvolvido em 54 horas no primeiro Startup Weekend Fintech da América Latina. Venceu a competição e virou empresa.",
+  },
+  {
+    period: "2015–2016",
+    title: "Aceleração Samsung e Bradesco",
+    body: "Selecionada para os programas de aceleração de startups da Samsung e do Bradesco — os primeiros grandes ensinando o que é vender para corporação.",
+  },
+  {
+    period: "2017",
+    title: "Top 100 da América Latina",
+    body: "Reconhecida pelo Inovativa Brasil como uma das 100 startups mais inovadoras da América Latina.",
+  },
+  {
+    period: "2018",
+    title: "O pivot que virou produto",
+    body: "Saímos dos games customizados e construímos do zero uma plataforma de EAD/LMS. R$1 milhão de receita nos primeiros 12 meses do produto.",
+  },
+  {
+    period: "2019",
+    title: "O aporte que acelerou 5 anos em 5 meses",
+    body: "Captação de R$ 10 milhões com Janguiê Diniz, o bilionário fundador do Grupo Ser Educacional. Infraestrutura de nuvem, governança corporativa e crescimento de 410%.",
+  },
+  {
+    period: "2020",
+    title: "A pandemia e a Toolzz",
+    body: "Grandes grupos de educação e empresas passaram a operar 100% online na plataforma: Ser Educacional, J.Piaget, CPFL e o Instituto Êxito, entre outros.",
+  },
+  {
+    period: "2021–2025",
+    title: "Escala",
+    body: "De R$ 1,8 milhão para R$ 8,6 milhões por ano. Receita acumulada de R$ 31,6 milhões em cinco anos.",
+  },
+  {
+    period: "Hoje",
+    title: "Sete produtos, IA em produção",
+    body: "LMS, LXP, agentes verticais, copilot, chat e automação rodando dentro de iFood, Bradesco, Itaú e mais de três mil empresas.",
+  },
+];
 
 export const STAGE_PHOTOS = [
   {
@@ -184,4 +233,17 @@ export const STAGE_PHOTOS = [
     src: "/photos/palco-3.jpg",
     alt: "Lucas Moraes em podcast",
   },
+] as const;
+
+export const HISTORY_PHOTOS = [
+  { src: "/photos/foto-1.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-2.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-3.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-4.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-5.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-6.jpg", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-7.png", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-8.png", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-9.png", alt: "Lucas Moraes — trajetória" },
+  { src: "/photos/foto-10.png", alt: "Lucas Moraes — trajetória" },
 ] as const;

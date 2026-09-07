@@ -87,3 +87,42 @@ body {
     transition: none;
   }
 }
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+/* Proposta comercial: invisível na tela, visível só na impressão (PDF) */
+.print-only {
+  display: none;
+}
+
+@media print {
+  body > *:not(.print-only) {
+    display: none;
+  }
+
+  .print-only {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .proposal-sheet {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    color: #111;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .proposal-actions {
+    display: none;
+  }
+}
