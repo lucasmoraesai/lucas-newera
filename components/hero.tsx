@@ -19,13 +19,18 @@ export function Hero() {
             </span>
 
             <h1 className="tracking-tighter-display max-w-4xl text-5xl font-semibold leading-[1.04] md:text-[64px]">
-              Conselheiro de IA.
+              <Typewriter
+                phrases={[
+                  "CTO",
+                  "Conselheiro de IA",
+                  "CIO de IA",
+                  "Mentor de IA",
+                  "CEO de IA",
+                  "Arquiteto de IA",
+                ]}
+              />
               <br />
-              <span className="text-subtle">
-                <Typewriter
-                  phrases={["CTO as a Service", "CEO as a Service"]}
-                />
-              </span>
+              <span className="text-subtle">as a Service</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted">
