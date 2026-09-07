@@ -3,14 +3,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { useSearchParams } from "next/navigation";
-import { Great_Vibes } from "next/font/google";
+import { Caveat } from "next/font/google";
 import { getOffer, SITE_NAME } from "@/lib/config";
 import { formatBRL, whatsappHref } from "@/lib/whatsapp";
 import { Container } from "./container";
 
-const signature = Great_Vibes({
+const signature = Caveat({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["700"],
 });
 
 export function StartCheckout() {
@@ -188,7 +188,7 @@ export function StartCheckout() {
                 <header className="flex items-start justify-between gap-6 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-3">
                     <span
-                      className={`${signature.className} text-3xl leading-none text-neutral-900`}
+                      className={`${signature.className} text-4xl leading-none text-neutral-900`}
                       aria-hidden
                     >
                       LM
