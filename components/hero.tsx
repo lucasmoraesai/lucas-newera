@@ -23,10 +23,11 @@ export function Hero() {
                 phrases={[
                   "CTO",
                   "Conselheiro de IA",
-                  "CIO de IA",
+                  "CIO",
                   "Mentor de IA",
-                  "CEO de IA",
+                  "CEO",
                   "Arquiteto de IA",
+                  "Consultor de IA",
                 ]}
               />
               <br />
